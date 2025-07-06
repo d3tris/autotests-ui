@@ -24,10 +24,10 @@ def test_empty_courses_list(chromium_page_with_state: Page):
     expect(view_description_text_check).to_be_visible()
     expect(view_description_text_check).to_have_text('Results from the load test pipeline will be displayed here')
 
-
-def test_create_course(chromium_page_with_state: Page, create_course_page: CreateCoursePage,
-                       courses_list_page: CoursesListPage):
-    chromium_page_with_state.goto("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses/create")
+@pytest.mark.courses
+@pytest.mark.regression
+def test_create_course(create_course_page: CreateCoursePage, courses_list_page: CoursesListPage):
+    create_course_page.visit("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses/create")
     create_course_page.check_visible_create_course_title()
     create_course_page.check_disabled_create_course_button()
     create_course_page.check_visible_image_preview_empty_view()
