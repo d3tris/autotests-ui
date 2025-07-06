@@ -3,7 +3,7 @@ from playwright.sync_api import Page, expect
 
 
 class CreateCoursePage(BasePage):
-    def __int__(self, page: Page):
+    def __init__(self, page: Page):
         super().__init__(page)
 
         self.create_course_title = page.get_by_test_id('create-course-toolbar-title-text')

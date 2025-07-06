@@ -3,7 +3,7 @@ from playwright.sync_api import Page, expect
 
 
 class CoursesListPage(BasePage):
-    def __int__(self, page):
+    def __init__(self, page):
         super().__init__(page)
 
         self.courses_title = page.get_by_test_id('courses-list-toolbar-title-text')
@@ -42,7 +42,7 @@ class CoursesListPage(BasePage):
     def click_create_course_button(self):
         self.create_course_button.click()
 
-    def click_visible_course_card(
+    def check_visible_course_card(
             self,
             index: int,
             title: str,
