@@ -70,6 +70,7 @@ class CreateCoursePage(BasePage):
         expect(self.preview_image_upload_title).to_have_text('Tap on "Upload image" button to select file')
 
         expect(self.preview_image_upload_description).to_be_visible()
+
         expect(self.preview_image_upload_description).to_have_text('Recommended file size 540X300')
 
         expect(self.preview_image_upload_button).to_be_visible()
