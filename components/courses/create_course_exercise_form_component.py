@@ -1,8 +1,8 @@
 from components.base_component import BaseComponent
 from elements.button import Button
 from elements.input import Input
-from elements.textarea import Textarea
-from playwright.sync_api import expect, Page
+from elements.text import Text
+from playwright.sync_api import Page
 
 
 class CreateCourseExerciseFormComponent(BaseComponent):
@@ -11,7 +11,7 @@ class CreateCourseExerciseFormComponent(BaseComponent):
 
         self.delete_exercise_button = Button(page, "create-course-exercise-{index}-box-toolbar-delete-exercise-button",
                                              'Delete exercise')
-        self.subtitle = Textarea(page, "create-course-exercise-{index}-box-toolbar-subtitle-text", 'Subtitle subtitle')
+        self.subtitle = Text(page, "create-course-exercise-{index}-box-toolbar-subtitle-text", 'Subtitle subtitle')
         self.title_input = Input(page, "create-course-exercise-form-title-{index}-input", 'Title')
         self.description_input = Input(page, "create-course-exercise-form-description-{index}-input", 'Description')
 
