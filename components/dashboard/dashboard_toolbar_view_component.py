@@ -1,5 +1,5 @@
 from components.base_component import BaseComponent
-from playwright.sync_api import Page, expect
+from playwright.sync_api import Page
 from elements.text import Text
 
 
