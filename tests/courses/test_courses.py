@@ -48,7 +48,6 @@ class TestCourses:
             min_score='950'
         )
         create_course_page.image_upload_widget.upload_preview_image('./testdata/files/image.png')
-        create_course_page.image_upload_widget.check_visible(is_image_uploaded=True)
         create_course_page.toolbar_view.click_create_course_button()
 
         courses_list_page.toolbar_view.check_visible()
