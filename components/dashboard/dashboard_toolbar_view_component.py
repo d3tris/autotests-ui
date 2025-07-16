@@ -10,7 +10,7 @@ class DashboardToolbarViewComponent(BaseComponent):
 
         self.dashboard_title = Text(page, 'dashboard-toolbar-title-text', 'Title')
 
-    @allure.step('Checking if the dashboard toolbar is visible')
+    @allure.step('Check visible dashboard toolbar view')
     def check_visible(self):
         self.dashboard_title.check_visible()
         self.dashboard_title.check_have_text('Dashboard')
