@@ -2,7 +2,8 @@ from enum import Enum
 from typing import Self
 from pydantic import EmailStr, FilePath, HttpUrl, DirectoryPath, BaseModel
 from pydantic_settings import BaseSettings, SettingsConfigDict
-
+import platform
+import sys
 
 class Browser(str, Enum):
     WEBKIT = "webkit"
@@ -36,6 +37,8 @@ class Settings(BaseSettings):
     tracing_dir: DirectoryPath
     allure_results_dir: DirectoryPath
     browser_state_file: FilePath
+    os_info: str = f"{platform.system()}, {platform.release()}"
+    python_version: str = sys.version
 
     def get_base_url(self) -> str:
         return f"{self.app_url}/"
