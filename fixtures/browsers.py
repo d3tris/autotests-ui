@@ -34,6 +34,7 @@ def initialize_browser_state(playwright: Playwright):
     )
     registration_page.click_registration_button()
     # registration_page.page.wait_for_timeout(2000)
+
     dashboard_page.dashboard.check_visible()
     context.storage_state(path=settings.browser_state_file)
     browser.close()
