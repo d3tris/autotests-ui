@@ -2,14 +2,23 @@
 
 This project implements automated tests for
 the [UI Course Test Application](https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/auth/login). The
-tests are written using **Python**, **Pytest**, **Allure** and **Playwright**. The test application’s source code is available
+tests are written using **Python**, **Pytest**, **Allure** and **Playwright**. The test application’s source code is
+available
 on [GitHub](https://github.com/Nikita-Filonov/qa-automation-engineer-ui-course).
 
 ## Project Overview
 
 The goal of this project is to automate the testing of the UI Course application. The automated tests verify various
-functionalities of the application to ensure its stability and correctness. The project structure follows best practices
-for organizing test code with clear, maintainable scripts.
+functionalities of the application to ensure its stability and correctness.
+
+This project is specifically designed for UI autotests, incorporating best practices such as:
+
+- Playwright for browser configuration, as well as Page Object, Page Component, and Page Factory patterns,
+- Pytest fixtures for reusable and maintainable test setups, test configuration and parameterization,
+- Pydantic models for strict data validation and test automation configurations,
+- Allure Report for report generation, adding videos, logs, and metadata,
+- And more advanced techniques to improve test efficiency and reliability.
+- The project structure follows best practices for organizing test code with clear, maintainable scripts.
 
 ## Getting Started
 
