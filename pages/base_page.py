@@ -17,7 +17,7 @@ class BasePage:
         step = f'Opening the url "{url}"'
         with allure.step(step):
             logger.info(step)
-            self.page.goto(url, wait_until="networkidle")
+            self.page.goto(url, wait_until="domcontentloaded")
 
     # Метод для перезагрузки страницы
     def reload(self):
